@@ -1,0 +1,9 @@
+<h1>employees</h1> 
+
+<div ng-repeat="employee in employeesCtrl.employees">
+	<a ui-sref="employeeDetail({id:employee.id})">{{employee.firstName}}</a> {{employee.gender}}
+
+	<a href="#/employees/{{employee.id}}">{{employee.firstName}}</a>
+</div>
+
+<button ng-click="employeesCtrl.reloadData()">Reload</button>
